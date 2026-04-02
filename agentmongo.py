@@ -23,14 +23,6 @@ CRITICAL QUERY RULES - YOU MUST FOLLOW THESE:
 3. CORRECT:   { "$match": { "cropName": "Ground nut PeanutMung phalli" } }
 4. INCORRECT: { "$match": { cropName: "Ground nut PeanutMung phalli" } }
 5. Every key in the pipeline dict MUST be a quoted string.
-6. If a query fails, rewrite it with ALL keys and values in double quotes and retry.
-
-SCOPE RULES:
-7. You ONLY answer questions about the 'crops' collection.
-8. If the question is completely unrelated to crops, agriculture, districts,
-   seasons, yield, or any field in the crops collection, reply EXACTLY with:
-   "This data is not available in the database."
-9. Do NOT answer general knowledge, math, weather, coding, or non-database questions.
 
 The 'crops' collection has these exact fields:
 - "_id"               : ObjectId
@@ -74,31 +66,14 @@ class NaturalLanguageToMQL:
                         prompt=self.system_message)
 
     def ask(self, query):
-        try:
-            self.messages = []
-            events = self.agent.stream(
-                {"messages": [("user", query)]},
-                stream_mode="values",
-            )
-            for event in events:
-                self.messages.extend(event["messages"])
-
-            answer = self.messages[-1].content
-
-            # Only check if agent explicitly said no data
-            no_data_phrases = [
-                "not available in the database",
-                "no results", "no records", "no documents",
-                "no data found", "could not find", "couldn't find",
-            ]
-            if any(phrase in answer.lower() for phrase in no_data_phrases):
-                print("\n❌ Answer: This data is not available in the database.")
-            else:
-                print("\n📊 Answer:", answer)
-
-        except Exception as e:
-            print(f"\n⚠️  Something went wrong: {e}")
-
+        self.messages = []
+        events = self.agent.stream(
+            {"messages": [("user", query)]},
+            stream_mode="values",
+        )
+        for event in events:
+            self.messages.extend(event["messages"])
+        print("\n📊 Answer:", self.messages[-1].content)
         print("-" * 60)
 
 def main():
