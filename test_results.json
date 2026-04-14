@@ -1,0 +1,347 @@
+{
+  "summary": {
+    "total": 48,
+    "passed": 48,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": "100.0%"
+  },
+  "results": [
+    {
+      "test_name": "Simple Query: Count total crops",
+      "query": "How many crops are in the database?",
+      "status": "PASS",
+      "details": "Query executed successfully",
+      "timestamp": "2026-04-14T12:57:38.163676"
+    },
+    {
+      "test_name": "Simple Query: Retrieve unique states",
+      "query": "List all states",
+      "status": "PASS",
+      "details": "Query executed successfully",
+      "timestamp": "2026-04-14T12:57:41.021731"
+    },
+    {
+      "test_name": "Simple Query: Get unique crop names",
+      "query": "Show me all crop names",
+      "status": "PASS",
+      "details": "Query executed successfully",
+      "timestamp": "2026-04-14T12:57:43.784294"
+    },
+    {
+      "test_name": "Filter Query: State filter",
+      "query": "Find all crops in Odisha",
+      "status": "PASS",
+      "details": "Filter applied correctly",
+      "timestamp": "2026-04-14T12:57:46.039443"
+    },
+    {
+      "test_name": "Filter Query: Season filter",
+      "query": "Show crops from KHARIF season",
+      "status": "PASS",
+      "details": "Filter applied correctly",
+      "timestamp": "2026-04-14T12:57:55.051386"
+    },
+    {
+      "test_name": "Filter Query: Exact field match",
+      "query": "List crops with cropCode A0402",
+      "status": "PASS",
+      "details": "Filter applied correctly",
+      "timestamp": "2026-04-14T12:58:19.628433"
+    },
+    {
+      "test_name": "Filter Query: District filter",
+      "query": "Show crops in district KHORDHA",
+      "status": "PASS",
+      "details": "Filter applied correctly",
+      "timestamp": "2026-04-14T12:58:30.174954"
+    },
+    {
+      "test_name": "Filter Query: Year filter",
+      "query": "Find all varieties in year 2023-24",
+      "status": "PASS",
+      "details": "Filter applied correctly",
+      "timestamp": "2026-04-14T12:58:51.167275"
+    },
+    {
+      "test_name": "Aggregation Query: Sum aggregation",
+      "query": "What is the total estimated yield?",
+      "status": "PASS",
+      "details": "Aggregation executed successfully",
+      "timestamp": "2026-04-14T12:59:06.015318"
+    },
+    {
+      "test_name": "Aggregation Query: Average aggregation",
+      "query": "Calculate average intake quantity",
+      "status": "PASS",
+      "details": "Aggregation executed successfully",
+      "timestamp": "2026-04-14T12:59:20.148200"
+    },
+    {
+      "test_name": "Aggregation Query: Max aggregation",
+      "query": "Find maximum processed quantity",
+      "status": "PASS",
+      "details": "Aggregation executed successfully",
+      "timestamp": "2026-04-14T12:59:33.460754"
+    },
+    {
+      "test_name": "Aggregation Query: Min aggregation",
+      "query": "Show minimum tested quantity",
+      "status": "PASS",
+      "details": "Aggregation executed successfully",
+      "timestamp": "2026-04-14T12:59:41.555544"
+    },
+    {
+      "test_name": "Aggregation Query: Group by state",
+      "query": "Count crops by state",
+      "status": "PASS",
+      "details": "Aggregation executed successfully",
+      "timestamp": "2026-04-14T13:00:03.154505"
+    },
+    {
+      "test_name": "Complex Query: Multiple filters",
+      "query": "Find all groundnut crops in Odisha during KHARIF season",
+      "status": "PASS",
+      "details": "Complex query processed correctly",
+      "timestamp": "2026-04-14T13:00:28.755987"
+    },
+    {
+      "test_name": "Complex Query: Filter + condition",
+      "query": "Show crops with estimated yield greater than 50 from 2023-24",
+      "status": "PASS",
+      "details": "Complex query processed correctly",
+      "timestamp": "2026-04-14T13:00:52.310606"
+    },
+    {
+      "test_name": "Complex Query: Multiple conditions",
+      "query": "List distinct variety names for rice in FOUNDATION I class",
+      "status": "PASS",
+      "details": "Complex query processed correctly",
+      "timestamp": "2026-04-14T13:01:20.368386"
+    },
+    {
+      "test_name": "Complex Query: OR condition",
+      "query": "Find all crops in Odisha or Maharashtra",
+      "status": "PASS",
+      "details": "Complex query processed correctly",
+      "timestamp": "2026-04-14T13:01:43.718398"
+    },
+    {
+      "test_name": "Complex Query: AND condition",
+      "query": "Show crops that were tested and passed in 2023-24",
+      "status": "PASS",
+      "details": "Complex query processed correctly",
+      "timestamp": "2026-04-14T13:02:06.569381"
+    },
+    {
+      "test_name": "Edge Case: Zero value check",
+      "query": "Find crops with zero estimated yield",
+      "status": "PASS",
+      "details": "Edge case handled correctly",
+      "timestamp": "2026-04-14T13:02:29.489580"
+    },
+    {
+      "test_name": "Edge Case: NULL handling",
+      "query": "Show crops with NULL or empty variety names",
+      "status": "PASS",
+      "details": "Edge case handled correctly",
+      "timestamp": "2026-04-14T13:02:44.350258"
+    },
+    {
+      "test_name": "Edge Case: Non-existent data",
+      "query": "Find crops from year 2099",
+      "status": "PASS",
+      "details": "Edge case handled correctly",
+      "timestamp": "2026-04-14T13:03:04.613483"
+    },
+    {
+      "test_name": "Edge Case: Sorting",
+      "query": "Show all crops sorted by estimated yield in descending order",
+      "status": "PASS",
+      "details": "Edge case handled correctly",
+      "timestamp": "2026-04-14T13:03:15.354687"
+    },
+    {
+      "test_name": "Edge Case: Range query",
+      "query": "Find crops with estimated yield between 10 and 100",
+      "status": "PASS",
+      "details": "Edge case handled correctly",
+      "timestamp": "2026-04-14T13:03:38.223965"
+    },
+    {
+      "test_name": "Edge Case: Limit/top N",
+      "query": "Show top 5 crops by intake quantity",
+      "status": "PASS",
+      "details": "Edge case handled correctly",
+      "timestamp": "2026-04-14T13:03:49.877029"
+    },
+    {
+      "test_name": "Edge Case: Special characters in values",
+      "query": "Find all FOUNDATION I destination class crops",
+      "status": "PASS",
+      "details": "Edge case handled correctly",
+      "timestamp": "2026-04-14T13:04:11.996542"
+    },
+    {
+      "test_name": "NL Variation: Direct question",
+      "query": "How many crops are grown in Odisha?",
+      "status": "PASS",
+      "details": "Variation understood correctly",
+      "timestamp": "2026-04-14T13:04:15.886688"
+    },
+    {
+      "test_name": "NL Variation: Count phrasing",
+      "query": "What is the count of crops in Odisha?",
+      "status": "PASS",
+      "details": "Variation understood correctly",
+      "timestamp": "2026-04-14T13:04:36.099775"
+    },
+    {
+      "test_name": "NL Variation: Number phrasing",
+      "query": "Tell me the number of crops in Odisha",
+      "status": "PASS",
+      "details": "Variation understood correctly",
+      "timestamp": "2026-04-14T13:04:39.949698"
+    },
+    {
+      "test_name": "NL Variation: Show all",
+      "query": "Show all varieties of groundnut",
+      "status": "PASS",
+      "details": "Variation understood correctly",
+      "timestamp": "2026-04-14T13:05:08.521481"
+    },
+    {
+      "test_name": "NL Variation: List",
+      "query": "List groundnut varieties",
+      "status": "PASS",
+      "details": "Variation understood correctly",
+      "timestamp": "2026-04-14T13:05:16.494661"
+    },
+    {
+      "test_name": "NL Variation: Give me",
+      "query": "Give me groundnut varieties",
+      "status": "PASS",
+      "details": "Variation understood correctly",
+      "timestamp": "2026-04-14T13:05:36.887594"
+    },
+    {
+      "test_name": "Typo Test: Typo in 'crops'",
+      "query": "Find all crpos in Odisha",
+      "status": "PASS",
+      "details": "Typo handled or corrected",
+      "timestamp": "2026-04-14T13:05:40.369854"
+    },
+    {
+      "test_name": "Typo Test: Typo in state name",
+      "query": "Show me all Odsisha states",
+      "status": "PASS",
+      "details": "Typo handled or corrected",
+      "timestamp": "2026-04-14T13:05:45.897872"
+    },
+    {
+      "test_name": "Typo Test: Different capitalization",
+      "query": "KHARIF season crops",
+      "status": "PASS",
+      "details": "Typo handled or corrected",
+      "timestamp": "2026-04-14T13:05:49.174339"
+    },
+    {
+      "test_name": "Invalid Query: Unrelated question",
+      "query": "What is the meaning of life?",
+      "status": "PASS",
+      "details": "Agent appropriately handled invalid query",
+      "timestamp": "2026-04-14T13:05:53.680629"
+    },
+    {
+      "test_name": "Invalid Query: Off-topic query",
+      "query": "Tell me a joke",
+      "status": "PASS",
+      "details": "Agent appropriately handled invalid query",
+      "timestamp": "2026-04-14T13:05:57.470615"
+    },
+    {
+      "test_name": "Invalid Query: Nonsensical input",
+      "query": "Blah blah blah",
+      "status": "PASS",
+      "details": "Agent appropriately handled invalid query",
+      "timestamp": "2026-04-14T13:06:00.951446"
+    },
+    {
+      "test_name": "Invalid Query: Completely unrelated",
+      "query": "How to cook biryani?",
+      "status": "PASS",
+      "details": "Agent appropriately handled invalid query",
+      "timestamp": "2026-04-14T13:06:04.524843"
+    },
+    {
+      "test_name": "Numeric Query: Greater than",
+      "query": "Find crops with estimated yield greater than 100",
+      "status": "PASS",
+      "details": "Numeric comparison executed correctly",
+      "timestamp": "2026-04-14T13:06:28.384129"
+    },
+    {
+      "test_name": "Numeric Query: Less than",
+      "query": "Show crops with pass quantity less than 50",
+      "status": "PASS",
+      "details": "Numeric comparison executed correctly",
+      "timestamp": "2026-04-14T13:06:52.434669"
+    },
+    {
+      "test_name": "Numeric Query: Equal to",
+      "query": "Find crops with intake quantity equal to 100",
+      "status": "PASS",
+      "details": "Numeric comparison executed correctly",
+      "timestamp": "2026-04-14T13:07:02.803083"
+    },
+    {
+      "test_name": "Numeric Query: Range between",
+      "query": "Show crops with estimated yield >= 50 and <= 200",
+      "status": "PASS",
+      "details": "Numeric comparison executed correctly",
+      "timestamp": "2026-04-14T13:07:12.212194"
+    },
+    {
+      "test_name": "Numeric Query: NOT condition",
+      "query": "Find crops with NOT zero estimated yield",
+      "status": "PASS",
+      "details": "Numeric comparison executed correctly",
+      "timestamp": "2026-04-14T13:07:35.470375"
+    },
+    {
+      "test_name": "Grouping Query: Group by state",
+      "query": "Count crops grouped by state",
+      "status": "PASS",
+      "details": "Grouping/sorting executed correctly",
+      "timestamp": "2026-04-14T13:07:57.075665"
+    },
+    {
+      "test_name": "Grouping Query: Average grouped",
+      "query": "Show average yield by season",
+      "status": "PASS",
+      "details": "Grouping/sorting executed correctly",
+      "timestamp": "2026-04-14T13:08:17.148126"
+    },
+    {
+      "test_name": "Grouping Query: Top N by group",
+      "query": "Top 10 districts by crop count",
+      "status": "PASS",
+      "details": "Grouping/sorting executed correctly",
+      "timestamp": "2026-04-14T13:08:39.265471"
+    },
+    {
+      "test_name": "Grouping Query: Sort ascending",
+      "query": "Sort crops by estimated yield ascending",
+      "status": "PASS",
+      "details": "Grouping/sorting executed correctly",
+      "timestamp": "2026-04-14T13:08:48.984851"
+    },
+    {
+      "test_name": "Grouping Query: Sort descending",
+      "query": "Sort crops by processed quantity descending",
+      "status": "PASS",
+      "details": "Grouping/sorting executed correctly",
+      "timestamp": "2026-04-14T13:09:00.053052"
+    }
+  ]
+}

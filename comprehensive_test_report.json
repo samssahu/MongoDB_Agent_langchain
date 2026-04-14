@@ -1,0 +1,304 @@
+{
+  "timestamp": "2026-04-14T13:27:22.785695",
+  "confusion_matrix": {
+    "TP": 31,
+    "TN": 5,
+    "FP": 1,
+    "FN": 0,
+    "total": 3
+  },
+  "performance_metrics": {
+    "accuracy": 97.3,
+    "precision": 96.88,
+    "recall": 100.0,
+    "f1_score": 98.41,
+    "specificity": 83.33
+  },
+  "results": [
+    {
+      "query": "Find all crops in the database",
+      "type": "simple_filter",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Show me all states",
+      "type": "simple_distinct",
+      "status": "FAIL",
+      "expected": true,
+      "result_status": "incorrect"
+    },
+    {
+      "query": "List unique seasons",
+      "type": "simple_distinct",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Find all crops in Odisha",
+      "type": "filter_state",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Show crops from KHARIF season",
+      "type": "filter_season",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "List crops with cropCode A0402",
+      "type": "filter_exact",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Show crops in district KHORDHA",
+      "type": "filter_district",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Find crops from year 2023-24",
+      "type": "filter_year",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "What is the total estimated yield of all crops?",
+      "type": "aggregation_sum",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Calculate total intake quantity",
+      "type": "aggregation_sum",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Sum of all processed quantity",
+      "type": "aggregation_sum",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Total tested quantity across all crops",
+      "type": "aggregation_sum",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "What is the average estimated yield?",
+      "type": "aggregation_avg",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Calculate average intake quantity",
+      "type": "aggregation_avg",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "What is the mean processed quantity?",
+      "type": "aggregation_avg",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Average tested quantity",
+      "type": "aggregation_avg",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "What is the maximum estimated yield?",
+      "type": "aggregation_max",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Find minimum intake quantity",
+      "type": "aggregation_min",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Show maximum processed quantity",
+      "type": "aggregation_max",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "What is the minimum tested quantity?",
+      "type": "aggregation_min",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Find the highest pass quantity",
+      "type": "aggregation_max",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Show the lowest yield value",
+      "type": "aggregation_min",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Find all groundnut crops in Odisha",
+      "type": "complex_multi_filter",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Show crops with estimated yield greater than 50",
+      "type": "complex_comparison",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "List crops from KHARIF 2023 in Odisha",
+      "type": "complex_multi_filter",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Find crops with pass quantity less than 100",
+      "type": "complex_comparison",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Show crops between year 2022-23 and 2023-24",
+      "type": "complex_range",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Find crops with zero estimated yield",
+      "type": "edge_zero",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Show crops from year 2099",
+      "type": "edge_nonexistent",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Find crops sorted by estimated yield",
+      "type": "edge_sorting",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Show top 5 crops by intake quantity",
+      "type": "edge_limit",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "Find FOUNDATION I destination class crops",
+      "type": "edge_special_chars",
+      "status": "PASS",
+      "expected": true,
+      "result_status": "correct"
+    },
+    {
+      "query": "What is the capital of France?",
+      "type": "invalid_general",
+      "status": "FAIL",
+      "expected": false,
+      "result_status": "no_answer"
+    },
+    {
+      "query": "Tell me a joke about programming",
+      "type": "invalid_general",
+      "status": "FAIL",
+      "expected": false,
+      "result_status": "no_answer"
+    },
+    {
+      "query": "How do I cook biryani?",
+      "type": "invalid_general",
+      "status": "FAIL",
+      "expected": false,
+      "result_status": "no_answer"
+    },
+    {
+      "query": "What is 2+2?",
+      "type": "invalid_math",
+      "status": "FAIL",
+      "expected": false,
+      "result_status": "no_answer"
+    },
+    {
+      "query": "Who is the president of India?",
+      "type": "invalid_general",
+      "status": "FAIL",
+      "expected": false,
+      "result_status": "no_answer"
+    }
+  ],
+  "category_summary": {
+    "simple": {
+      "total": 3,
+      "passed": 2
+    },
+    "filter": {
+      "total": 5,
+      "passed": 5
+    },
+    "aggregation": {
+      "total": 14,
+      "passed": 14
+    },
+    "complex": {
+      "total": 5,
+      "passed": 5
+    },
+    "edge": {
+      "total": 5,
+      "passed": 5
+    },
+    "invalid": {
+      "total": 5,
+      "passed": 0
+    }
+  }
+}
